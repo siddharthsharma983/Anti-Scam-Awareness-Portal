@@ -5,7 +5,7 @@
 ---
 
 ## 🚀 Live Demo
-
+anti-scam-awareness-portal.vercel.app
 
 You can try the demo locally by opening the `index.html` file in your browser.  
 Optional features like camera preview and location are **consent-based**.
