@@ -7,7 +7,7 @@
 ## 🚀 Live Demo
 
 You can try the demo online here:  
-live demo - (https://anti-scam-awareness-portal.vercel.app) 🌐  
+live demo - https://anti-scam-awareness-portal.vercel.app 🌐  
 
 Or try locally by opening the `index.html` file in your browser.  
 Optional features like camera preview and location are **consent-based**.
